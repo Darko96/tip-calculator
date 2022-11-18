@@ -1,0 +1,249 @@
+:root {
+  --Strong-cyan: #26c0ab;
+  --Very-dark-cyan: #00494d;
+  --Dark-grayish-cyan: #5e7a7d;
+  --Grayish-cyan: #7f9c9f;
+  --Light-grayish-cyan: #c5e4e7;
+  --Very-light-grayish-cyan: #f4fafa;
+  --White: #ffffff;
+  --regular-font-color: #5e7a7d;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  line-height: 1;
+  font-size: 1.6rem;
+  font-weight: 700;
+  font-family: "Space Mono", monospace;
+  color: var(--regular-font-color);
+  background-color: var(--Light-grayish-cyan);
+}
+
+main {
+  height: 100vh;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  max-width: 92rem;
+  background-color: var(--White);
+
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+
+  padding: 3.2rem;
+  border-radius: 2.5rem;
+
+  gap: 4.8rem;
+}
+
+.input-container {
+  width: 37.9rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  gap: 4rem;
+}
+
+.bill-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.bill-label {
+  margin-bottom: 0.6rem;
+}
+
+.input-bill {
+  height: 4.5rem;
+  width: 37.9rem;
+  padding: 0 1.7rem 0 1.7rem;
+  background-color: var(--Very-light-grayish-cyan);
+  border-radius: 0.5rem;
+  border: var(--Very-light-grayish-cyan);
+  text-align: right;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #00474b;
+  line-height: 3.6rem;
+}
+
+.num-of-people-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  gap: 0.6rem;
+}
+
+form input:focus {
+  border: 3px solid hsla(172, 67%, 45%, 0.445);
+  border-radius: 5px;
+  outline: none;
+}
+
+label {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--Dark-grayish-cyan);
+}
+
+label span {
+  display: none;
+}
+
+label span.empty {
+  margin-left: 8rem;
+  display: inline;
+  color: red;
+}
+
+#people-count.empty {
+  border: 3px solid rgb(255, 102, 102, 0.5);
+}
+
+.input-people {
+  height: 4.5rem;
+  width: 37.9rem;
+  padding: 0 1.7rem 0 1.7rem;
+  background-color: var(--Very-light-grayish-cyan);
+  border-radius: 0.5rem;
+  border: var(--Very-light-grayish-cyan);
+  text-align: right;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--Very-dark-cyan);
+  line-height: 3.6rem;
+}
+
+.select-tip {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.percent-options {
+  display: grid;
+  grid-template-columns: 11.7rem 11.7rem 11.7rem;
+  grid-template-rows: 4.8rem 4.8rem;
+  gap: 1.6rem;
+}
+
+.percent-options > button {
+  background-color: var(--Very-dark-cyan);
+  color: var(--White);
+  text-align: center;
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 3.6rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+.percent-options > button::after {
+  content: "%";
+}
+
+.percent-options > button:hover {
+  background-color: var(--Light-grayish-cyan);
+  color: var(--Very-dark-cyan);
+}
+
+.percent-options > button.click {
+  background-color: var(--Strong-cyan);
+}
+
+.input-custom {
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 3.6rem;
+  color: var(--regular-font-color);
+  text-align: right;
+  background-color: #f3f9fa;
+  border: none;
+}
+/* ------------------- RIGHT PART ------------------------ */
+
+.display-container {
+  width: 41.3rem;
+  background-color: var(--Very-dark-cyan);
+
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  justify-content: center;
+
+  gap: 2.5rem;
+  padding: 4rem;
+  border-radius: 1.5rem;
+}
+
+.display-tip,
+.display-bill {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.display-bill {
+  margin-bottom: 8rem;
+}
+
+.tip-description,
+.total-description {
+  line-height: 2.4rem;
+  color: var(--White);
+}
+
+.person-description {
+  font-size: 1.3rem;
+  line-height: 1.9rem;
+  color: #7f9d9f;
+}
+
+.amount {
+  font-size: 4.8rem;
+  line-height: 7.1rem;
+  letter-spacing: -0.1rem;
+  color: var(--Strong-cyan);
+}
+
+.btn-reset {
+  background-color: var(--Strong-cyan);
+  border-radius: 0.5rem;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 3rem;
+  color: var(--Very-dark-cyan);
+  text-align: center;
+  border: none;
+  padding: 0.9rem 0;
+  text-transform: uppercase;
+}
+
+.btn-reset:hover {
+  background-color: var(--Light-grayish-cyan);
+  color: var(--Very-dark-cyan);
+}
